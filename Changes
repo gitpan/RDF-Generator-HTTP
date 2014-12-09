@@ -1,0 +1,11 @@
+RDF-Generator-HTTP
+==================
+
+Created:      2014-10-08
+Home page:    <https://metacpan.org/release/RDF-Generator-HTTP>
+Bug tracker:  <https://github.com/kjetilk/p5-rdf-generator-http/issues>
+Wiki:         <http://wiki.perlrdf.org/>
+Mailing list: <http://lists.perlrdf.org/listinfo/dev>
+Maintainer:   Kjetil Kjernsmo (KJETILK) <kjetilk@cpan.org>
+
+0.001	2014-10-08	Initial release
