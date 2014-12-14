@@ -33,7 +33,7 @@ my $meta = {
                         test      => { requires => { "Test::More" => 0.96, "Test::RDF" => 0 } },
                       },
   "provides"       => {
-                        "RDF::Generator::HTTP" => { file => "lib/RDF/Generator/HTTP.pm", version => 0.001 },
+                        "RDF::Generator::HTTP" => { file => "lib/RDF/Generator/HTTP.pm", version => 0.002 },
                       },
   "release_status" => "stable",
   "resources"      => {
@@ -52,7 +52,7 @@ my $meta = {
                         x_mailinglist => "http://lists.perlrdf.org/listinfo/dev",
                         x_wiki        => "http://wiki.perlrdf.org/",
                       },
-  "version"        => 0.001,
+  "version"        => 0.002,
 };
 
 my %dynamic_config;

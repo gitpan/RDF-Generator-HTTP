@@ -8,4 +8,6 @@ Wiki:         <http://wiki.perlrdf.org/>
 Mailing list: <http://lists.perlrdf.org/listinfo/dev>
 Maintainer:   Kjetil Kjernsmo (KJETILK) <kjetilk@cpan.org>
 
+0.002	2014-12-14	Improve documentation
+
 0.001	2014-10-08	Initial release

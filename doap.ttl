@@ -30,7 +30,7 @@
 	doap:maintainer      <http://purl.org/NET/cpan-uri/person/kjetilk>;
 	doap:name            "RDF-Generator-HTTP";
 	doap:programming-language "Perl";
-	doap:release         <http://purl.org/NET/cpan-uri/dist/RDF-Generator-HTTP/v_0-001>;
+	doap:release         <http://purl.org/NET/cpan-uri/dist/RDF-Generator-HTTP/v_0-001>, <http://purl.org/NET/cpan-uri/dist/RDF-Generator-HTTP/v_0-002>;
 	doap:repository      [
 		a doap:GitRepository;
 		doap:browse <https://github.com/kjetilk/p5-rdf-generator-http>;
@@ -47,6 +47,15 @@
 	doap-changeset:released-by <http://purl.org/NET/cpan-uri/person/kjetilk>;
 	doap:file-release    <http://backpan.cpan.org/authors/id/K/KJ/KJETILK/RDF-Generator-HTTP-0.001.tar.gz>;
 	doap:revision        "0.001"^^xsd:string.
+
+<http://purl.org/NET/cpan-uri/dist/RDF-Generator-HTTP/v_0-002>
+	a                    doap:Version;
+	rdfs:label           "Improve documentation";
+	dc:identifier        "RDF-Generator-HTTP-0.002"^^xsd:string;
+	dc:issued            "2014-12-14"^^xsd:date;
+	doap-changeset:released-by <http://purl.org/NET/cpan-uri/person/kjetilk>;
+	doap:file-release    <http://backpan.cpan.org/authors/id/K/KJ/KJETILK/RDF-Generator-HTTP-0.002.tar.gz>;
+	doap:revision        "0.002"^^xsd:string.
 
 <http://purl.org/NET/cpan-uri/person/kjetilk>
 	a                    foaf:Person;
