@@ -5,7 +5,7 @@ use strict;
 use warnings;
 
 our $AUTHORITY = 'cpan:KJETILK';
-our $VERSION   = '0.002';
+our $VERSION   = '0.003';
 
 use Moo;
 use Carp qw(carp);
@@ -21,6 +21,14 @@ has whitelist => (is => 'rw', isa => ArrayRef[Str], predicate => 'has_whitelist'
 
 has graph => (is => 'rw', isa => InstanceOf['RDF::Trine::Node::Resource'], predicate => 'has_graph');
 
+has request_subject => (is => 'ro',
+								isa => InstanceOf['RDF::Trine::Node'],
+								default => sub { return blank });
+
+has response_subject => (is => 'ro',
+								 isa => InstanceOf['RDF::Trine::Node'],
+								 default => sub { return blank });
+
 has ns => (is => 'ro', isa => InstanceOf['URI::NamespaceMap'], lazy => 1, builder => '_build_namespacemap');
 
 sub _build_namespacemap {
@@ -34,8 +42,8 @@ sub _build_namespacemap {
 sub generate {
 	my $self = shift;	
 	my $model = shift || RDF::Trine::Model->temporary_model;
-	my $reqsubj = blank();
-	my $ressubj = blank();
+	my $reqsubj = $self->request_subject;
+	my $ressubj = $self->response_subject;
 	my @graph = $self->has_graph ? ($self->graph) : ();
 	my $ns = $self->ns;
 	if ($self->message->isa('HTTP::Request')) {
@@ -181,7 +189,8 @@ Moose-style constructor function.
 
 =head2 Attributes
 
-These attributes may be passed to the constructor.
+These attributes may be passed to the constructor to set them, or
+called like methods to get them.
 
 =over
 
@@ -207,6 +216,16 @@ output. This must be an object of L<RDF::Trine::Node::Resource>.
 
 An L<URI::NamespaceMap> object containing namespace prefixes used in
 the module. You should probably not override this even though you can.
+
+=item C<< request_subject >>
+
+An L<RDF::Trine::Node> object containing the subject of any statements
+describing requests. If unset, it will default to a blank node.
+
+=item C<< response_subject >>
+
+An L<RDF::Trine::Node> object containing the subject of any statements
+describing responses. If unset, it will default to a blank node.
 
 =back
 
@@ -238,7 +257,7 @@ true if the given field and value may be added to the model.
 =head1 EXAMPLES
 
 For an example of what the module can be used to create, consider the
-example in the L<SYNOPSIS>, which at the time of this writing outputs
+example in the L</SYNOPSIS>, which at the time of this writing outputs
 the following Turtle:
 
   @prefix http: <http://www.w3.org/2007/ont/http#> .

@@ -30,7 +30,8 @@ DESCRIPTION
         Moose-style constructor function.
 
   Attributes
-    These attributes may be passed to the constructor.
+    These attributes may be passed to the constructor to set them, or called
+    like methods to get them.
 
     `message`
         A HTTP::Message (or subclass thereof) object to generate RDF for.
@@ -52,6 +53,14 @@ DESCRIPTION
         An URI::NamespaceMap object containing namespace prefixes used in the
         module. You should probably not override this even though you can.
 
+    `request_subject`
+        An RDF::Trine::Node object containing the subject of any statements
+        describing requests. If unset, it will default to a blank node.
+
+    `response_subject`
+        An RDF::Trine::Node object containing the subject of any statements
+        describing responses. If unset, it will default to a blank node.
+
   Methods
     The above attributes all have read-accessors by the same name.
     `blacklist`, `whitelist` and `graph` also has writers and predicates,
@@ -71,7 +80,7 @@ DESCRIPTION
 
 EXAMPLES
     For an example of what the module can be used to create, consider the
-    example in the SYNOPSIS, which at the time of this writing outputs the
+    example in the "SYNOPSIS", which at the time of this writing outputs the
     following Turtle:
 
       @prefix http: <http://www.w3.org/2007/ont/http#> .

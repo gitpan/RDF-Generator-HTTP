@@ -26,7 +26,7 @@ optional_features: {}
 provides:
   RDF::Generator::HTTP:
     file: lib/RDF/Generator/HTTP.pm
-    version: 0.002
+    version: 0.003
 requires:
   Carp: 0
   HTTP::Message: 0
@@ -44,4 +44,4 @@ resources:
   homepage: https://metacpan.org/release/RDF-Generator-HTTP
   license: http://dev.perl.org/licenses/
   repository: git://github.com/kjetilk/p5-rdf-generator-http.git
-version: 0.002
+version: 0.003

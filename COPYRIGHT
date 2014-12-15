@@ -3,20 +3,20 @@ Upstream-Name: RDF-Generator-HTTP
 Upstream-Contact: Kjetil Kjernsmo (KJETILK) <kjetilk@cpan.org>
 Source: https://metacpan.org/release/RDF-Generator-HTTP
 
-Files: README
- README.pod
- lib/RDF/Generator/HTTP.pm
- t/01basic.t
- t/message.t
-Copyright: This software is copyright (c) 2014 by Kjetil Kjernsmo.
-License: GPL-1.0+ or Artistic-1.0
-
 Files: Changes
  META.json
  META.yml
  dist.ini
  doap.ttl
 Copyright: Copyright 2014 Kjetil Kjernsmo.
+License: GPL-1.0+ or Artistic-1.0
+
+Files: README
+ README.pod
+ lib/RDF/Generator/HTTP.pm
+ t/01basic.t
+ t/message.t
+Copyright: This software is copyright (c) 2014 by Kjetil Kjernsmo.
 License: GPL-1.0+ or Artistic-1.0
 
 Files: COPYRIGHT

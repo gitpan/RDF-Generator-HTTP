@@ -30,7 +30,7 @@
 	doap:maintainer      <http://purl.org/NET/cpan-uri/person/kjetilk>;
 	doap:name            "RDF-Generator-HTTP";
 	doap:programming-language "Perl";
-	doap:release         <http://purl.org/NET/cpan-uri/dist/RDF-Generator-HTTP/v_0-001>, <http://purl.org/NET/cpan-uri/dist/RDF-Generator-HTTP/v_0-002>;
+	doap:release         <http://purl.org/NET/cpan-uri/dist/RDF-Generator-HTTP/v_0-001>, <http://purl.org/NET/cpan-uri/dist/RDF-Generator-HTTP/v_0-002>, <http://purl.org/NET/cpan-uri/dist/RDF-Generator-HTTP/v_0-003>;
 	doap:repository      [
 		a doap:GitRepository;
 		doap:browse <https://github.com/kjetilk/p5-rdf-generator-http>;
@@ -56,6 +56,25 @@
 	doap-changeset:released-by <http://purl.org/NET/cpan-uri/person/kjetilk>;
 	doap:file-release    <http://backpan.cpan.org/authors/id/K/KJ/KJETILK/RDF-Generator-HTTP-0.002.tar.gz>;
 	doap:revision        "0.002"^^xsd:string.
+
+<http://purl.org/NET/cpan-uri/dist/RDF-Generator-HTTP/v_0-003>
+	a                    doap:Version;
+	rdfs:label           "Attributes for subjects";
+	dc:identifier        "RDF-Generator-HTTP-0.003"^^xsd:string;
+	dc:issued            "2014-12-15"^^xsd:date;
+	doap-changeset:changeset [
+		doap-changeset:item [
+			a doap-changeset:Documentation;
+			rdfs:label "Fix internal link";
+		], [
+			a doap-changeset:Addition;
+			rdfs:label "Create attributes to set and access the subjects of messages.";
+		];
+		doap-changeset:versus <http://purl.org/NET/cpan-uri/dist/RDF-Generator-HTTP/v_0-002>;
+	];
+	doap-changeset:released-by <http://purl.org/NET/cpan-uri/person/kjetilk>;
+	doap:file-release    <http://backpan.cpan.org/authors/id/K/KJ/KJETILK/RDF-Generator-HTTP-0.003.tar.gz>;
+	doap:revision        "0.003"^^xsd:string.
 
 <http://purl.org/NET/cpan-uri/person/kjetilk>
 	a                    foaf:Person;
